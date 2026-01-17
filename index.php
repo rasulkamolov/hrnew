@@ -194,7 +194,7 @@
         }
         .file-preview.active { display: block; }
 
-        input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+        input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; z-index: 10; }
 
         /* Navigation Bar */
         .nav {
@@ -437,7 +437,7 @@
             inputHtml = `<select id="inp" class="${commonClass}">${opts}</select>`;
         } else if (q.type === 'file') {
             inputHtml = `
-            <div class="file-box" onclick="document.getElementById('inp').click()">
+            <div class="file-box">
                 <div class="file-content">
                     <i class="fa-solid ${q.icon} file-icon"></i>
                     <div class="file-text" id="ftxt">Fayl tanlash</div>
